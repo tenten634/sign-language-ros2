@@ -1,0 +1,41 @@
+{
+  "description": "Available locations in the house that the robot can navigate to.",
+  "locations": [
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "aliases": ["kitchen", "cooking area"],
+      "description": "The kitchen where food is prepared and stored.",
+      "pose": { "x": 0.5, "y": 0.0, "theta_deg": 0.0 }
+    },
+    {
+      "id": "living_room",
+      "name": "Living Room",
+      "aliases": ["living room", "lounge"],
+      "description": "The living room for relaxation and entertainment.",
+      "pose": { "x": 0.0, "y": 0.5, "theta_deg": 0.0 }
+    },
+    {
+      "id": "bedroom",
+      "name": "Bedroom",
+      "aliases": ["bedroom", "bed room"],
+      "description": "The bedroom for sleeping.",
+      "pose": { "x": 0.35, "y": 0.35, "theta_deg": 0.0 }
+    },
+    {
+      "id": "bathroom",
+      "name": "Bathroom",
+      "aliases": ["bathroom", "restroom"],
+      "description": "The bathroom for personal hygiene.",
+      "pose": { "x": 0.0, "y": -0.5, "theta_deg": 0.0 }
+    },
+    {
+      "id": "dining_room",
+      "name": "Dining Room",
+      "aliases": ["dining room", "dining area"],
+      "description": "The dining room for eating meals.",
+      "pose": { "x": 0.35, "y": -0.35, "theta_deg": 0.0 }
+    }
+  ]
+}
+

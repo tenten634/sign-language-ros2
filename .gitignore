@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# OS / editor
+.cursor/
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ROS / colcon
+install/
+log/
+build/
+.colcon/
+
+# ASL package: large / local assets (not in git)
+asl_recognition_ros2/input_videos/
+asl_recognition_ros2/models/

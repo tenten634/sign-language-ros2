@@ -1,0 +1,8 @@
+# Request
+string video_path  # Full path to video file, or empty to process all videos in folder
+---
+# Response
+string recognized_text
+float32 confidence
+bool success
+string error_message

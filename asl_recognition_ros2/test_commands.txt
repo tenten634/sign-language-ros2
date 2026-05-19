@@ -1,0 +1,151 @@
+# Thesis benchmark set (single file).
+# Contains two command types:
+# 1) Deterministic explicit commands
+# 2) Intent/paraphrase commands
+# Each command is repeated 3 times for reproducibility.
+
+# ==========================================
+# Type 1: Deterministic explicit commands
+# ==========================================
+
+# ---- Repeat 1 ----
+# expect: [move_forward distance_m=0.3]
+# go forward 0.3 m
+# expect: [move_forward distance_m=0.5]
+# go forward 0.5 meters
+# expect: [move_backward distance_m=0.3]
+# move backward 0.3 meters
+# expect: [rotate_right angle_deg=90.0]
+# turn right 90 degrees
+# expect: [rotate_left angle_deg=90.0]
+# turn left 90 degrees
+# expect: [wait duration_s=5.0]
+# wait 5 seconds
+# expect: [navigate_to location="kitchen"]
+# go to kitchen
+# expect: [navigate_to location="living_room"]
+# go to living room
+# expect: [navigate_to location="bedroom"]
+# go to bedroom
+# expect: [navigate_to location="bathroom"]
+# go to bathroom
+# expect: [navigate_to location="dining_room"]
+# go to dining room
+
+# ---- Repeat 2 ----
+# go forward 0.3 m
+# go forward 0.5 meters
+# move backward 0.3 meters
+# turn right 90 degrees
+# turn left 90 degrees
+# wait 5 seconds
+# go to kitchen
+# go to living room
+# go to bedroom
+# go to bathroom
+# go to dining room
+
+# ---- Repeat 3 ----
+# go forward 0.3 m
+# go forward 0.5 meters
+# move backward 0.3 meters
+# turn right 90 degrees
+# turn left 90 degrees
+# wait 5 seconds
+# go to kitchen
+# go to living room
+# go to bedroom
+# go to bathroom
+# go to dining room
+
+# ==========================================
+# Type 2: Intent / paraphrase commands
+# ==========================================
+# For thesis scoring, use set-match where needed
+# (e.g., "eat" can map to kitchen or dining_room).
+
+# ---- Repeat 1 ----
+# expect: [navigate_to location in {"kitchen","dining_room"}]
+# i want to eat
+# expect: [navigate_to location="bedroom"]
+# i want to sleep
+# expect: [navigate_to location="bathroom"]
+# i want to wash my hands
+# expect: [navigate_to location in {"kitchen","dining_room"}]
+# i am hungry, please take me where i can eat
+# expect: [navigate_to location="living_room"]
+# i want to rest in the living room
+
+# ---- Repeat 2 ----
+# i want to eat
+# i want to sleep
+# i want to wash my hands
+# i am hungry, please take me where i can eat
+# i want to rest in the living room
+
+# ---- Repeat 3 ----
+# i want to eat
+# i want to sleep
+# i want to wash my hands
+# i am hungry, please take me where i can eat
+# i want to rest in the living room
+
+# ==========================================
+# Type 3: Noisy ASR-like commands
+# ==========================================
+# Goal: show robustness to spacing/spelling/unit noise.
+# Keep noise realistic (not completely broken).
+
+# ---- Repeat 1 ----
+# expect: [move_forward distance_m=0.5]
+# go for ward 0.5 m
+# expect: [rotate_right angle_deg=90.0]
+# turn right 90deg
+# expect: [wait duration_s=5.0]
+# wait 5sec
+# expect: [navigate_to location="living_room"]
+# go to livng room
+# expect: [navigate_to location in {"kitchen","dining_room"}]
+# i want to ea t
+
+# ---- Repeat 2 ----
+# go for ward 0.5 m
+# turn right 90deg
+# wait 5sec
+# go to livng room
+# i want to ea t
+
+# ---- Repeat 3 ----
+# go for ward 0.5 m
+# turn right 90deg
+# wait 5sec
+# go to livng room
+# i want to ea t
+
+# ==========================================
+# Type 4: Safety negatives
+# ==========================================
+# Goal: verify safe rejection / clarification behavior.
+
+# ---- Repeat 1 ----
+# expect: no navigate_to (unknown location)
+go to garden
+# expect: clarification or skip (missing distance)
+go forward
+# expect: out-of-range handling (reject or clamp with clear stop_reason)
+go forward 3 meters
+# expect: clarification or safe interpretation only
+turn left and right 90 degrees
+
+# ---- Repeat 2 ----
+go to garden
+go forward
+go forward 3 meters
+turn left and right 90 degrees
+
+# ---- Repeat 3 ----
+go to garden
+go forward
+go forward 3 meters
+turn left and right 90 degrees
+

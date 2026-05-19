@@ -1,0 +1,31 @@
+evaluation,gt_text,recognized_text,cer,plan_success,execution_success,asl_total,llm_total,cpu_percent_done,mem_percent_done,stop_reason
+camera,go forward for 1 meter,borward berry mesa,0.5,0,0,18.226,41.892,15.0,84.7,Parameters not specified
+camera,go forward for 1 meter,go forward for lane,0.272727,0,0,18.282,52.556,10.8,85.2,Parameters not specified
+camera,go forward for 1 meter,90 forward for lanete,0.272727,1,1,18.13,54.489,15.2,86.3,
+camera,go to bathroom,goto batrook,0.214286,1,1,16.875,52.403,14.6,81.3,
+camera,go to bathroom,topbathroon,0.357143,1,1,18.78,53.575,14.1,81.8,
+camera,go to bathroom,hoto bathrock,0.285714,1,1,16.692,51.862,7.3,82.6,
+camera,go to bed,go to beck,0.222222,1,1,16.464,52.438,15.6,86.8,
+camera,go to bed,10 to bed,0.222222,1,1,16.823,59.823,9.4,76.1,
+camera,go to bed,te been,0.666667,0,0,16.235,52.063,15.4,77.2,Parameters not specified
+camera,go to bedroom,topberton,0.538462,0,0,17.73,54.892,15.5,87.0,Parameters not specified
+camera,go to bedroom,anth beckson,0.615385,0,0,17.615,53.424,9.4,89.1,No valid plan
+camera,go to bedroom,to begroon,0.384615,1,1,19.113,59.769,8.8,84.2,
+camera,go to dining room,geopto/dinningprosm,0.352941,0,0,18.044,53.513,9.3,85.7,Parameters not specified
+camera,go to dining room,geote dining road,0.294118,1,1,19.219,54.578,13.2,85.8,
+camera,go to dining room,geptoptciningprocom.br,0.588235,1,1,18.587,52.451,14.8,86.8,
+camera,go to kitchen,10 to kitchen,0.153846,1,1,17.536,41.36,14.6,77.0,
+camera,go to kitchen,copto kitchen,0.153846,1,1,17.785,53.152,11.3,85.6,
+camera,go to kitchen,geto kitchen,0.153846,1,1,17.174,52.831,13.2,85.9,
+camera,go to living room,10 to living room,0.117647,1,1,18.067,59.989,11.3,83.9,
+camera,go to living room,10 to living room,0.117647,1,1,18.662,53.253,11.4,85.2,
+camera,go to living room,10 to living road,0.235294,0,0,18.085,53.767,14.1,86.4,No valid plan
+camera,i need to make dinner,i need to make dinner,0.0,1,1,18.739,63.172,15.6,84.6,
+camera,i need to make dinner,i need to make dinner,0.0,1,1,18.252,52.271,12.8,85.2,
+camera,i need to make dinner,i need to make dinner,0.0,1,1,17.852,51.755,12.2,86.1,
+camera,i want to go shower,i want to the shower,0.157895,1,1,17.693,52.369,15.6,76.5,
+camera,i want to go shower,i want to go shower,0.0,1,1,17.997,52.933,11.7,77.4,
+camera,i want to go shower,i want to go shower,0.0,1,1,17.711,52.19,15.1,78.3,
+camera,i want to sleep,ivant to sleephonson,0.533333,1,1,17.047,55.488,15.4,79.7,
+camera,i want to sleep,i want to slerp,0.066667,0,0,16.943,52.034,15.7,80.5,Parameters not specified
+camera,i want to sleep,i wants to slepp,0.133333,1,1,17.032,52.401,14.0,81.1,
